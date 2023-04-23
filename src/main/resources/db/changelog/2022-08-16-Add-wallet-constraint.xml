@@ -1,0 +1,14 @@
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+    <changeSet id="2022-08-16-40-22" author="prometheus">
+        <addUniqueConstraint
+                columnNames="name, currency_id, person_id"
+                constraintName="name_currency_pid_constraint"
+                tableName="wallet"
+        />
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,27 @@
+version: '3.1'
+
+services:
+  amalthea:
+#    image: amalthea
+    build: .
+    container_name: amalthea
+    environment:
+      - DB_HOST=jdbc:postgresql://postgres-server:5432/postgres
+      - DB_USERNAME=postgres
+      - DB_PASSWORD=password
+    ports:
+      - 8080:9090
+    depends_on:
+      - postgres-server
+  #    command: postgres -p 5432
+
+  postgres-server:
+    image: postgres:13.1
+    container_name: postgres-server
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+    ports:
+      - 5432:5432
+    command: postgres -p 5432
