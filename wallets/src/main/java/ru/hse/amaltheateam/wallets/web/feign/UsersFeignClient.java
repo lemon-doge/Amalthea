@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import ru.hse.amaltheateam.wallets.dto.user.response.UserResponseDTO;
 
-@FeignClient(name = "amalthea-users")
+@FeignClient(name = "amalthea-users", url = "http://localhost:8082")
 public interface UsersFeignClient {
 
     @RequestMapping(method = RequestMethod.GET, value = "/api/v1/users/{id}", produces = "application/json")

@@ -8,7 +8,7 @@ import ru.hse.amaltheateam.wallets.dto.currency.response.CurrencyRateResponseDTO
 
 import java.util.List;
 
-@FeignClient(name = "amalthea-currency-rates")
+@FeignClient(name = "amalthea-currency-rates", url = "http://localhost:8081")
 public interface CurrencyRatesFeignClient {
 
     @RequestMapping(method = RequestMethod.GET, value = "/api/v1/rates", produces = "application/json")
