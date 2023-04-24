@@ -1,4 +1,4 @@
-package com.tinkoff.sirius.amalthea.dto.currencyrate.response;
+package ru.hse.amaltheateam.currencyrate.dto.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

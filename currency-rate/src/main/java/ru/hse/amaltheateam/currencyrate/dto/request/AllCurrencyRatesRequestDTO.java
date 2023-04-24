@@ -1,4 +1,4 @@
-package com.tinkoff.sirius.amalthea.dto.currencyrate.request;
+package ru.hse.amaltheateam.currencyrate.dto.request;
 
 import lombok.Getter;
 import lombok.Setter;

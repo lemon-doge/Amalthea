@@ -1,10 +1,9 @@
-package com.tinkoff.sirius.amalthea.dto.currencyrate.request;
+package ru.hse.amaltheateam.currencyrate.dto.request;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Transient;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -32,7 +31,6 @@ public class CurrencyRateRequestDTO implements Serializable {
 
     @XmlElement(name = "Value")
     @JsonIgnore
-    @Transient
     private String valueString;
 
     private BigDecimal value;
