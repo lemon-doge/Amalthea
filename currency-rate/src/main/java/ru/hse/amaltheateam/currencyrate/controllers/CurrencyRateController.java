@@ -1,11 +1,11 @@
-package com.tinkoff.sirius.amalthea.controller;
+package ru.hse.amaltheateam.currencyrate.controllers;
 
-import com.tinkoff.sirius.amalthea.dto.currencyrate.response.CurrencyRateResponseDTO;
-import com.tinkoff.sirius.amalthea.service.CurrencyRateService;
 import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import ru.hse.amaltheateam.currencyrate.dto.response.CurrencyRateResponseDTO;
+import ru.hse.amaltheateam.currencyrate.services.CurrencyRateService;
 
 import java.util.List;
 

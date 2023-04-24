@@ -1,10 +1,7 @@
-package com.tinkoff.sirius.amalthea.dto.currency.response;
+package ru.hse.amaltheateam.currencyrate.dto.response;
 
 import io.swagger.v3.oas.annotations.media.Schema;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import lombok.experimental.Accessors;
 
 @Getter
@@ -12,6 +9,7 @@ import lombok.experimental.Accessors;
 @NoArgsConstructor
 @AllArgsConstructor
 @Accessors(chain = true)
+@Builder
 public class CurrencyResponseDTO {
 
     @Schema(example = "1000006")
