@@ -1,6 +1,5 @@
 package ru.hse.amaltheateam.wallets.dto.operation.request;
 
-import com.tinkoff.sirius.amalthea.dto.category.request.CategoryRequestDTO;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

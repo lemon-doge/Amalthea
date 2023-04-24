@@ -11,7 +11,6 @@ import ru.hse.amaltheateam.wallets.web.exceptions.CategoryDeleteException;
 import ru.hse.amaltheateam.wallets.web.exceptions.CategoryNotFoundException;
 import ru.hse.amaltheateam.wallets.web.mappers.CategoryMapper;
 import ru.hse.amaltheateam.wallets.web.repository.CategoryRepository;
-import ru.hse.amaltheateam.wallets.web.services.users.UsersService;
 
 import java.util.List;
 import java.util.Optional;
@@ -20,10 +19,10 @@ import java.util.Optional;
 public class CategoryService {
     private final CategoryRepository categoryRepository;
     private final CategoryMapper categoryMapper;
-    private final UsersService usersService;
+    private final UsersFeignService usersService;
 
     public CategoryService(CategoryRepository categoryRepository, CategoryMapper categoryMapper,
-                           UsersService usersService) {
+                           UsersFeignService usersService) {
         this.categoryRepository = categoryRepository;
         this.categoryMapper = categoryMapper;
         this.usersService = usersService;

@@ -11,7 +11,6 @@ import ru.hse.amaltheateam.wallets.model.Wallet;
 import ru.hse.amaltheateam.wallets.web.mappers.WalletMapper;
 import ru.hse.amaltheateam.wallets.web.repository.CurrencyRepository;
 import ru.hse.amaltheateam.wallets.web.repository.WalletRepository;
-import ru.hse.amaltheateam.wallets.web.services.users.UsersService;
 
 import java.math.BigDecimal;
 
@@ -21,10 +20,10 @@ public class WalletService {
     private final WalletRepository walletRepository;
     private final WalletMapper walletMapper;
     private final CurrencyRepository currencyRepository;
-    private final UsersService usersService;
+    private final UsersFeignService usersService;
 
     @Autowired
-    public WalletService(WalletRepository walletRepository, WalletMapper walletMapper, CurrencyRepository currencyRepository, UsersService usersService) {
+    public WalletService(WalletRepository walletRepository, WalletMapper walletMapper, CurrencyRepository currencyRepository, UsersFeignService usersService) {
         this.walletRepository = walletRepository;
         this.walletMapper = walletMapper;
         this.currencyRepository = currencyRepository;

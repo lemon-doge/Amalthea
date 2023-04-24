@@ -1,10 +1,9 @@
 package ru.hse.amaltheateam.wallets.dto.wallet.response;
 
-import com.tinkoff.sirius.amalthea.dto.currency.response.CurrencyResponseDTO;
-import com.tinkoff.sirius.amalthea.model.Currency;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Builder;
 import lombok.Data;
+import ru.hse.amaltheateam.wallets.dto.currency.response.CurrencyResponseDTO;
 
 import java.math.BigDecimal;
 

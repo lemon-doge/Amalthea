@@ -1,14 +1,14 @@
 package ru.hse.amaltheateam.wallets.dto.category.request;
 
-import com.tinkoff.sirius.amalthea.model.CategoryType;
-import com.tinkoff.sirius.amalthea.validator.category.ValidCategoryIconColor;
-import com.tinkoff.sirius.amalthea.validator.category.ValidCategoryName;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.experimental.Accessors;
+import ru.hse.amaltheateam.wallets.model.CategoryType;
+import ru.hse.amaltheateam.wallets.validator.category.ValidCategoryIconColor;
+import ru.hse.amaltheateam.wallets.validator.category.ValidCategoryName;
 
 @Getter
 @Setter

@@ -1,9 +1,9 @@
 package ru.hse.amaltheateam.wallets.dto.wallet.request;
 
-import com.tinkoff.sirius.amalthea.validator.wallet.ValidWalletName;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Builder;
 import lombok.Data;
+import ru.hse.amaltheateam.wallets.validator.wallet.ValidWalletName;
 
 import javax.validation.constraints.Min;
 import java.math.BigDecimal;
