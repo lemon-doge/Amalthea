@@ -12,9 +12,9 @@
     </parent>
 
     <groupId>ru.hse.amaltheateam.currency</groupId>
-    <artifactId>currency-rate</artifactId>
+    <artifactId>amalthea-currency-rates</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>amalthea</name>
+    <name>currency-rate</name>
     <description>best expense tracker in the world</description>
 
 
@@ -94,16 +94,16 @@
             <version>1.6.9</version>
         </dependency>
 
-        <!-- Liquibase -->
-        <dependency>
-            <groupId>org.liquibase</groupId>
-            <artifactId>liquibase-core</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <scope>test</scope>
-        </dependency>
+<!--        &lt;!&ndash; Liquibase &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>org.liquibase</groupId>-->
+<!--            <artifactId>liquibase-core</artifactId>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>junit</groupId>-->
+<!--            <artifactId>junit</artifactId>-->
+<!--            <scope>test</scope>-->
+<!--        </dependency>-->
 
         <!-- For currency rate -->
         <dependency>
@@ -144,9 +144,6 @@
                 <configuration>
                     <source>17</source>
                     <target>17</target>
-                    <compilerArgs>
-                        --enable-preview
-                    </compilerArgs>
                 </configuration>
             </plugin>
         </plugins>

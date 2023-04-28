@@ -1,19 +1,54 @@
-version: '3.1'
+version: "3.1"
 
 services:
-  amalthea:
-#    image: amalthea
-    build: .
-    container_name: amalthea
+#  amalthea:
+##    image: amalthea
+#    build: .
+#    container_name: amalthea
+#    environment:
+#      - DB_HOST=jdbc:postgresql://postgres-server:5432/postgres
+#      - DB_USERNAME=postgres
+#      - DB_PASSWORD=password
+#    ports:
+#      - 8080:9090
+#    depends_on:
+#      - postgres-server
+#  #    command: postgres -p 5432
+  users:
+    image: amalthea-users:1.0-SNAPSHOT
+    ports:
+      - "8082:8082"
+    container_name: amalthea-users
     environment:
       - DB_HOST=jdbc:postgresql://postgres-server:5432/postgres
       - DB_USERNAME=postgres
       - DB_PASSWORD=password
-    ports:
-      - 8080:9090
     depends_on:
       - postgres-server
-  #    command: postgres -p 5432
+
+  wallets:
+    image: amalthea-wallets:1.0-SNAPSHOT
+    ports:
+      - "8083:8083"
+    container_name: amalthea-wallets
+    environment:
+      - DB_HOST=jdbc:postgresql://postgres-server:5432/postgres
+      - DB_USERNAME=postgres
+      - DB_PASSWORD=password
+    depends_on:
+      - postgres-server
+
+  currency-rates:
+    image: amalthea-currency-rates:1.0-SNAPSHOT
+    ports:
+      - "8081:8081"
+    container_name: amalthea-currency-rates
+    environment:
+      - DB_HOST=jdbc:postgresql://postgres-server:5432/postgres
+      - DB_USERNAME=postgres
+      - DB_PASSWORD=password
+    depends_on:
+      - postgres-server
 
   postgres-server:
     image: postgres:13.1
@@ -23,5 +58,6 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=password
     ports:
-      - 5432:5432
+      - "5432:5432"
+    restart: always
     command: postgres -p 5432
