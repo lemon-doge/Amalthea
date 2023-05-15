@@ -56,8 +56,6 @@ public class Wallet {
     @Column(name = "expense")
     private BigDecimal expense;
 
-    @ManyToOne
-    @JoinColumn(name = "person_id")
-    private User user;
+    private Long userId;
 }
 

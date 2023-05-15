@@ -10,6 +10,6 @@ import java.util.List;
 
 @Repository
 public interface CategoryRepository extends JpaRepository<Category, Long> {
-    @Query("select c from Category c where (c.user.id is null or c.user.id = :userId)")
+    @Query("select c from Category c where (c.userId is null or c.userId = :userId)")
     List<Category> findAllByUserId(@Param("userId") Long userId);
 }

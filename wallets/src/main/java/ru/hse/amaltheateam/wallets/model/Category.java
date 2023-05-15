@@ -55,7 +55,5 @@ public class Category {
     @Column(name = "icon_name")
     private String iconName;
 
-    @ManyToOne
-    @JoinColumn(name = "person_id")
-    private User user;
+    private Long userId;
 }

@@ -66,7 +66,7 @@ public class WalletService {
                 .balance(new BigDecimal(0))
                 .income(new BigDecimal(0))
                 .expense(new BigDecimal(0))
-                .user(user)
+                .userId(user.getId())
                 .build();
         return walletMapper.toDto(walletRepository.save(wallet));
     }

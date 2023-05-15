@@ -80,7 +80,7 @@ public class CategoryService {
                 .setIconColor(categoryRequestDTO.getIconColor())
                 .setSource(Source.CUSTOM)
                 .setIconName(iconPath)
-                .setUser(user);
+                .setUserId(user.getId());
 
         return categoryMapper.toResponseDTO(categoryRepository.save(category));
     }
